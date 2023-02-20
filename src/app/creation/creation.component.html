@@ -1,0 +1,31 @@
+<div class="jumbotron">
+    <h1 class="display-1">New Blog</h1>
+    <div class="form">
+        <div class="row">
+            <div class="col">
+                <mdb-form-control>
+                    <p class="lead">Full Name</p>
+                    <input mdbInput type="text" id="typeText" class="form-control ng-touched active"
+                        [(ngModel)]="author" />
+                </mdb-form-control>
+            </div>
+            <div class="col">
+                <mdb-form-control>
+                    <p class="lead">Blog Title</p>
+                    <input mdbInput type="text" id="typeText" class="form-control" [(ngModel)]="title" />
+                </mdb-form-control>
+            </div>
+        </div>
+
+
+        <mdb-form-control>
+            <p class="lead">Your Blog</p>
+            <textarea mdbInput class="form-control" id="textAreaExample" rows="9" [(ngModel)]="content"></textarea>
+        </mdb-form-control>
+        <button type="button" class="btn btn-outline-dark" (click)="submitBlog()">Submit Blog</button>
+    </div>
+
+
+
+
+</div>

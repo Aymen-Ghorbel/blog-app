@@ -1,0 +1,48 @@
+.jumbotron{
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
+
+}
+
+.display-1{
+    margin-left: 1%;
+    margin-bottom: 0px;
+}
+
+.form{
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.lead {
+    font-size: 1.75rem;
+}
+
+p{
+    margin-bottom: 0.4rem;
+    margin-top: 1.4rem;
+}
+
+.form-control{
+    font-size: 1.5rem;
+    border-radius: 0.2rem;
+}
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #2F4F4F;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(47,79,79, 0.25);
+  }
+
+
+
+.btn{
+    float: right;
+    margin-top: 3%;
+    --bs-btn-font-size: 1.2rem;
+    --bs-btn-border-radius: 0.2rem;
+}

@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row-container">
+    <i class="bi bi-search"></i>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username"
+        aria-describedby="basic-addon2" (input)="onSearch($event)">
+
+      <i class="feather icon-search"></i>
+    </div>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let blog of blogList" class="col">
+      <div *ngIf="blog.title.toUpperCase().includes(search.toUpperCase())" class="card" [ngClass]="{
+                    'positive' : blog.vote >= 0,
+                    'negative' : blog.vote < 0
+                 }">
+        <div class="card-body">
+          <h2 class="card-title">{{blog.title}}</h2>
+          <h6 class="card-subtitle mb-2 text-muted">by {{blog.author}}</h6>
+          <hr [ngClass]="{
+                            'positive' : blog.vote >= 0,
+                            'negative' : blog.vote < 0
+                         }">
+          <p class="card-text">{{textDisplayed(blog.content,490)}}</p>
+          Votes
+          <i class="bi bi-hand-thumbs-up" (click)="upVote(blog)"></i>
+          {{blog.vote}}
+          <i class="bi bi-hand-thumbs-down" (click)="downVote(blog)"></i>
+
+          <div *ngIf="blog.vote>=0">
+            <a routerLink="/details/{{blog.id}}" class="btn btn-outline-success">Continue reading</a>
+          </div>
+          <div *ngIf="blog.vote<0">
+            <a routerLink="/details/{{blog.id}}" class="btn btn-outline-danger">Continue reading</a>
+          </div>
+
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
