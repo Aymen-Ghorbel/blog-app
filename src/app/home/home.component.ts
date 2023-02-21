@@ -26,6 +26,7 @@ export class HomeComponent {
     
   }
 
+  //Text previewed in the card
   textDisplayed(text: string, length: number){
     let result: string;
     if (text.length>length){
@@ -45,10 +46,6 @@ export class HomeComponent {
       downVoted=false;
       // this.upDisabled=true;
     }
-    // if (this.upVoted){
-    //   this.blogService.downVote(blog).subscribe();
-    //   this.upVoted=false;
-    // }
     console.log('upvoted:', upVoted);
     console.log('downVoted: ', downVoted);
   }
@@ -61,14 +58,11 @@ export class HomeComponent {
       downVoted=true;
       upVoted=false;
     }
-    // if (this.downVoted){
-    //   this.blogService.upVote(blog).subscribe();
-    //   this.downVoted=false;
-    // }
     console.log('upvoted:', upVoted);
     console.log('downVoted: ', downVoted);
   }
 
+  
   onSearch(event: Event){
     this.search = (<HTMLInputElement>event.target).value
   }

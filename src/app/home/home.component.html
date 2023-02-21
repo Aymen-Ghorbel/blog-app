@@ -1,13 +1,26 @@
 <div class="container">
-  <div class="row-container">
-    <i class="bi bi-search"></i>
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username"
-        aria-describedby="basic-addon2" (input)="onSearch($event)">
 
-      <i class="feather icon-search"></i>
+  <div class="row">
+    <div class="col-2">
+      <p class="lead">
+        <a routerLink="/new" class="btn btn-outline-dark">New Blog</a>
+      </p>
+    </div>
+    <div class="col-10">
+      <div class="row-container">
+
+        <i class="bi bi-search"></i>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username"
+            aria-describedby="basic-addon2" (input)="onSearch($event)">
+
+          <i class="feather icon-search"></i>
+        </div>
+      </div>
     </div>
   </div>
+
+
 
   <div class="row">
     <div *ngFor="let blog of blogList" class="col">
@@ -29,14 +42,11 @@
           <i class="bi bi-hand-thumbs-down" (click)="downVote(blog)"></i>
 
           <div *ngIf="blog.vote>=0">
-            <a routerLink="/details/{{blog.id}}" class="btn btn-outline-success">Continue reading</a>
+            <a routerLink="/details/{{blog.id}}" class="btn btn-outline-primary">Continue reading</a>
           </div>
           <div *ngIf="blog.vote<0">
             <a routerLink="/details/{{blog.id}}" class="btn btn-outline-danger">Continue reading</a>
           </div>
-
-
-          
         </div>
       </div>
     </div>

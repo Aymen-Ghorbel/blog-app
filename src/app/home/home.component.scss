@@ -1,11 +1,11 @@
-.col{
+.col {
     margin: 10px;
     min-width: 30%;
     max-width: 30%;
     height: 90%;
 }
 
-.container{
+.container {
     max-width: 80%;
     margin-top: 3%;
 }
@@ -14,51 +14,57 @@
 //     height: 500px;
 // }
 
-.card{
+.card {
     height: 100%;
-    
+
     border-block-width: 3px;
     border-inline-width: 3px;
 
 }
 
-.positive{
-    border-color: #28a745;
-    // border-color: #90EE90;
+.positive {
+    // border-color: #28a745;
+    border-color: #3498DB;
 }
 
-.negative{
+.negative {
     border-color: red;
 }
 
-hr{
+hr {
     color: #28a745;
     border-top: 3px solid;
 }
 
-.btn{
+.btn {
     float: right;
 }
 
 .row-container {
     display: flex;
     justify-content: end;
-  }
+}
 
-.input-group{
-    
+.input-group {
+
     width: 25%;
 }
 
-.bi{
+.bi {
     margin-right: 1%;
     font-size: 150%;
 }
 
-.bi-hand-thumbs-up:hover{
-    color: #28a745;
+.bi-hand-thumbs-up:hover {
+    color: #3498DB;
 }
 
-.bi-hand-thumbs-down:hover{
+.bi-hand-thumbs-down:hover {
     color: red;
+}
+
+.btn-outline-dark {
+    --bs-btn-font-size: 1.2rem;
+    --bs-btn-border-radius: 0.2rem;
+    float: left;
 }
