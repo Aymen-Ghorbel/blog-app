@@ -1,5 +1,5 @@
 .jumbotron{
-    margin-top: 5%;
+    margin-top: 2%;
     margin-right: 10%;
     margin-left: 10%;
 
@@ -40,9 +40,15 @@ p{
 
 
 
-.btn{
+.sub{
     float: right;
-    margin-top: 3%;
+    margin-top: 2%;
     --bs-btn-font-size: 1.2rem;
     --bs-btn-border-radius: 0.2rem;
+}
+
+.home {
+    --bs-btn-font-size: 1.2rem;
+    --bs-btn-border-radius: 0.2rem;
+    margin: 20px;
 }

@@ -1,51 +1,49 @@
-<div class="container">
-
-  <div class="row">
-    <div class="col-2">
-      <p class="lead">
-        <a routerLink="/new" class="btn btn-outline-dark">New Blog</a>
-      </p>
-    </div>
-    <div class="col-10">
-      <div class="row-container">
-
-        <i class="bi bi-search"></i>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username"
-            aria-describedby="basic-addon2" (input)="onSearch($event)">
-
-          <i class="feather icon-search"></i>
+<div class="jumbotron">
+  <h1 class="display-1">Let's Blog</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <p class="lead">
+          <a routerLink="/new" class="btn btn-outline-dark">New Blog</a>
+        </p>
+      </div>
+      <div class="col-10">
+        <div class="row-container">
+          <i class="bi bi-search"></i>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username"
+              aria-describedby="basic-addon2" (input)="onSearch($event)">
+            <i class="feather icon-search"></i>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-
-
-  <div class="row">
-    <div *ngFor="let blog of blogList" class="col">
-      <div *ngIf="blog.title.toUpperCase().includes(search.toUpperCase())" class="card" [ngClass]="{
+    <div class="row ">
+      <div *ngFor="let blog of blogList" class="col-4">
+        <div *ngIf="blog.title.toUpperCase().includes(search.toUpperCase())" class="card" [ngClass]="{
                     'positive' : blog.vote >= 0,
                     'negative' : blog.vote < 0
                  }">
-        <div class="card-body">
-          <h2 class="card-title">{{blog.title}}</h2>
-          <h6 class="card-subtitle mb-2 text-muted">by {{blog.author}}</h6>
-          <hr [ngClass]="{
+          <div class="card-body">
+            <h2 class="card-title">{{blog.title}}</h2>
+            <h6 class="card-subtitle mb-2 text-muted">by {{blog.author}}</h6>
+            <hr [ngClass]="{
                             'positive' : blog.vote >= 0,
                             'negative' : blog.vote < 0
                          }">
-          <p class="card-text">{{textDisplayed(blog.content,490)}}</p>
-          Votes
-          <i class="bi bi-hand-thumbs-up" (click)="upVote(blog)"></i>
-          {{blog.vote}}
-          <i class="bi bi-hand-thumbs-down" (click)="downVote(blog)"></i>
+            <p class="card-text">{{textDisplayed(blog.content,490)}}</p>
+            Votes
+            <i class="bi bi-hand-thumbs-up" (click)="upVote(blog)"></i>
+            {{blog.vote}}
+            <i class="bi bi-hand-thumbs-down" (click)="downVote(blog)"></i>
 
-          <div *ngIf="blog.vote>=0">
-            <a routerLink="/details/{{blog.id}}" class="btn btn-outline-primary">Continue reading</a>
-          </div>
-          <div *ngIf="blog.vote<0">
-            <a routerLink="/details/{{blog.id}}" class="btn btn-outline-danger">Continue reading</a>
+            <div *ngIf="blog.vote>=0">
+              <a routerLink="/details/{{blog.id}}" class="btn btn-outline-primary">Continue reading</a>
+            </div>
+            <div *ngIf="blog.vote<0">
+              <a routerLink="/details/{{blog.id}}" class="btn btn-outline-danger">Continue reading</a>
+            </div>
           </div>
         </div>
       </div>

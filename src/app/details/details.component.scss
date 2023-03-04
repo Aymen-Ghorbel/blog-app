@@ -1,5 +1,5 @@
 .jumbotron{
-    margin-top: 5%;
+    margin-top: 2%;
     margin-right: 10%;
     margin-left: 10%;
 
@@ -24,7 +24,7 @@
     font-size: 1.75rem;
 }
 
-.bi{
+.thumb{
     font-size: 50px;
 }
 
@@ -40,3 +40,9 @@
     margin-left: 5%;
     font-size: 250%;
   }
+
+  .btn-outline-dark {
+    --bs-btn-font-size: 1.2rem;
+    --bs-btn-border-radius: 0.2rem;
+    margin: 20px;
+}
